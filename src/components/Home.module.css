@@ -211,3 +211,93 @@
   height: 25px;
   background-color: #181818;
 }
+
+
+
+@media (max-width: 450px) {
+  .homemain {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .left h1 {
+    font-size: 32px;
+  }
+  .left h2 {
+    font-size: 22px;
+  }
+  .left p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .right img {
+    width: 90%;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .videos .videobox {
+    width: 100%;
+    height: 200px;
+  }
+
+  .services h1 {
+    font-size: 18px;
+  }
+  .cardsWrapper {
+    width: 100%;
+  }
+  .servicecard {
+    width: 250px;
+    font-size: 18px;
+    height: 70px;
+  }
+
+  .index {
+    width: 100%;
+    padding: 30px 15px;
+    gap: 40px;
+  }
+  .index .section1 {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .section1 img {
+    height: 150px;
+  }
+  .section1 .content h1 {
+    font-size: 26px;
+  }
+  .section1 .content p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .section1 .content button {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
+  .indexline {
+    width: 100%;
+  }
+
+  .clients {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 10px;
+    text-align: center;
+  }
+  .clientnumber h1,
+  .yearnumber h1 {
+    font-size: 36px;
+  }
+  .verticalline {
+    display: none; /* hide vertical line in mobile */
+  }
+
+  .line1,
+  .line2 {
+    height: 15px;
+  }
+}
