@@ -9,11 +9,9 @@ import Linkedin from "../assets/Linkedin.webp";
 const Footer = () => {
   const [contact, setContact] = useState("");
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const validatePhoneNumber = (phone) => {
-    const regex = /^[0-9]{10}$/;
-    return regex.test(phone);
-  };
+  const validatePhoneNumber = (phone) => /^[0-9]{10}$/.test(phone);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +27,8 @@ const Footer = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/send-details", {
+      setLoading(true);
+      const res = await fetch("/api/send-details", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -41,7 +40,7 @@ const Footer = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert(data.message || "Details sent!");
+        alert(data.message || "Details sent successfully!");
         setName("");
         setContact("");
       } else {
@@ -50,6 +49,8 @@ const Footer = () => {
     } catch (error) {
       alert("Error sending details. Please try again later.");
       console.error("Submit error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -75,7 +76,7 @@ const Footer = () => {
               <img src={Gmail} alt="Gmail" />
             </a>
             <a
-              href="https://wa.me/YOUR_PHONE_NUMBER" // Replace with your WhatsApp number link
+              href="https://wa.me/YOUR_PHONE_NUMBER" // Replace with your WhatsApp link
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -109,7 +110,6 @@ const Footer = () => {
           <label>Full Name</label>
           <input
             type="text"
-            name="fullname"
             placeholder="Enter your full name here"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -128,8 +128,8 @@ const Footer = () => {
           />
         </div>
 
-        <button type="submit" className={styles.send}>
-          Send
+        <button type="submit" className={styles.send} disabled={loading}>
+          {loading ? "Sending..." : "Send"}
         </button>
       </form>
     </div>
