@@ -55,7 +55,7 @@ const Footer = () => {
   };
 
   return (
-    <div className={styles.footer}>
+    <div className={styles.footer} id="contact">
       {/* Left Section - Social Media */}
       <div className={styles.left}>
         <div className={styles.top}>
