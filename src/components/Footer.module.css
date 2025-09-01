@@ -1,0 +1,137 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  width: 100%;
+  background: linear-gradient(90deg, #2c2c2c, #181818);
+  padding: 50px 0px;
+  
+}
+.left .top{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.left .top h1{
+    font-size: 22px;
+    color: white;
+}
+.left .icon{
+    display: flex;
+    gap: 20px;
+}
+
+.left .icon img{
+    height: 40px;
+    cursor: pointer;
+}
+.center h1{
+    font-size: 22px;
+    color: white;
+    padding-bottom: 5px;
+}
+.center p{
+    font-size: 18px;
+    color: white;
+    
+}
+
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background-color: #414141;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+}
+.fullname {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+.fullname label {
+  color: white;
+}
+.fullname input {
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+.contactno {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+.contactno label {
+  color: white;
+}
+.contactno input {
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+.inputGroup {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.inputGroup input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+.send {
+    width: 89px;
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  color: #161616;
+  background-color: #cccccc;
+}
+.send:hover {
+  background-color: white;
+}
+
+.otp {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  margin-top: -5px;
+}
+
+.otp input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+.success {
+  background-color: #4caf50 !important; /* Green */
+  color: white !important;
+}
+
+.error {
+  background-color: #e53935 !important; /* Red */
+  color: white !important;
+}
+
+.send:disabled {
+  background-color: #888 !important; /* Greyed out */
+  cursor: not-allowed;
+}
+
+
