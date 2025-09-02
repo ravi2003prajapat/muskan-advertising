@@ -149,7 +149,7 @@
   width: 510px;
 }
 .section1 .content button {
-    margin-top: 10px;
+  margin-top: 10px;
   padding: 8px 17px;
   border-radius: 10px;
   font-size: 18px;
@@ -159,16 +159,15 @@
   border: none;
   outline: none;
 }
-.section1 .content button:hover{
-    background-color: #9112bc;
+.section1 .content button:hover {
+  background-color: #9112bc;
 }
 
-.indexline{
-    width: 1000px;
-    height: 2px;
-    background-color: #181818;
+.indexline {
+  width: 1000px;
+  height: 2px;
+  background-color: #181818;
 }
-
 
 .clients {
   display: flex;
@@ -212,9 +211,8 @@
   background-color: #181818;
 }
 
-
-
 @media (max-width: 450px) {
+  /* 🔹 Home Section */
   .homemain {
     flex-direction: column;
     padding: 30px 20px;
@@ -236,52 +234,79 @@
     margin-top: 15px;
   }
 
+  /* 🔹 Videos */
+  .videos {
+    padding: 20px;
+  }
   .videos .videobox {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    height: 160px;
   }
 
+  /* 🔹 Services */
   .services h1 {
     font-size: 18px;
   }
   .cardsWrapper {
-    width: 100%;
+    width: 90%;
   }
   .servicecard {
-    width: 250px;
+    width: 210px;
+    height: 50px;
     font-size: 18px;
-    height: 70px;
   }
 
+  /* 🔹 Index Section */
   .index {
-    width: 100%;
+    width: 90%;
     padding: 30px 15px;
     gap: 40px;
   }
   .index .section1 {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
     text-align: center;
+    gap: 20px;
   }
-  .section1 img {
-    height: 150px;
+
+  /* 🔹 Force image to top */
+  .index .section1 .image {
+    order: -1; /* ✅ moves image above content */
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .section1 .content h1 {
+
+  .index .section1 img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+
+  .index .section1 .content {
+    width: 100%;
+  }
+  .index .section1 .content h1 {
     font-size: 26px;
   }
-  .section1 .content p {
+  .index .section1 .content p {
     width: 100%;
     font-size: 14px;
   }
-  .section1 .content button {
+  .index .section1 .content button {
     font-size: 16px;
-    padding: 6px 14px;
+    padding: 10px 15px;
+    margin: 10px auto 0;
   }
 
   .indexline {
     width: 100%;
   }
 
+  /* 🔹 Clients */
   .clients {
     flex-direction: column;
     gap: 20px;
@@ -293,9 +318,10 @@
     font-size: 36px;
   }
   .verticalline {
-    display: none; /* hide vertical line in mobile */
+    display: none; /* Hide divider */
   }
 
+  /* 🔹 Lines */
   .line1,
   .line2 {
     height: 15px;
