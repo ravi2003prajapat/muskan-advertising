@@ -48,7 +48,7 @@ const Home = () => {
       // Years counter
       let yStart = 0;
       const yEnd = 26; // target years
-      const yDuration = 2000; // 2s
+      const yDuration = 10000; // 2s
       const yIncrement = Math.ceil(yEnd / (yDuration / 16));
 
       yearsTimer = setInterval(() => {
@@ -101,7 +101,7 @@ const Home = () => {
           </p>
         </div>
         <div className={styles.right}>
-          <img src={HomeMain} alt="Smart Marketing" />
+          <img loading="lazy" src={HomeMain} alt="Muskan Advertising" />
         </div>
       </div>
 
@@ -115,8 +115,9 @@ const Home = () => {
             autoPlay
             muted
             loop
+            preload="none"
             playsInline
-            poster="" // optional: add poster image
+            poster={HomeMain} // optional: add poster image
             className={styles.video} // for responsive styling
           >
             <source src={video2} type="video/webm" />
@@ -161,7 +162,7 @@ const Home = () => {
             <button>View More</button>
           </div>
           <div className={styles.image}>
-            <img src={newspaper} alt="Muskan Advertising" />
+            <img loading="lazy" src={newspaper} alt="Muskan Advertising" />
           </div>
         </div>
 
@@ -169,7 +170,7 @@ const Home = () => {
 
         <div className={styles.section1}>
           <div className={styles.image}>
-            <img src={machine} alt="Muskan Advertising" />
+            <img loading="lazy" src={machine} alt="Muskan Advertising" />
           </div>
           <div className={styles.content}>
             <h1>HIGH QUALITY PRINTING</h1>
@@ -195,7 +196,7 @@ const Home = () => {
             <button>View More</button>
           </div>
           <div className={styles.image}>
-            <img src={hoarding} alt="Muskan Advertising" />
+            <img loading="lazy" src={hoarding} alt="Muskan Advertising" />
           </div>
         </div>
       </div>
