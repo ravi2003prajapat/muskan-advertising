@@ -242,6 +242,11 @@
     width: 90%;
     height: 160px;
   }
+  .videobox video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   /* 🔹 Services */
   .services h1 {

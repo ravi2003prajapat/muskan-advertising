@@ -7,7 +7,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 15px 30px;
-  width: 86%;
+  width: 100%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -16,6 +16,7 @@
 }
 
 .right {
+  display: flex;
   align-items: center;
 }
 
@@ -59,9 +60,9 @@ li button:hover {
   color: white;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - hidden by default */
 .hamburger {
-  display: flex;
+  display: none; /* hide on desktop */
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -88,8 +89,13 @@ li button:hover {
 
 /* Responsive Mobile Styles */
 @media (max-width: 450px) {
+  .navbar {
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+  }
   .hamburger {
-    display: flex;
+    display: flex; /* show only on small screens */
   }
 
   .right {
@@ -103,16 +109,16 @@ li button:hover {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
-    
   }
 
   .right.active {
     max-height: 500px; /* enough for all links */
   }
 
-  .right ul {
+  /* Mobile menu items in a horizontal row */
+  .right.active ul {
     display: flex;
-    flex-direction: row; /* change from column to row */
+    flex-direction: row; /* horizontal layout */
     gap: 12px;
     font-size: 15px;
     padding: 10px 0;
@@ -124,5 +130,10 @@ li button:hover {
   li button {
     font-size: 15px;
     padding: 4px 6px;
+    width: auto; /* auto width for row layout */
+  }
+
+  .underline {
+    font-size: 15px;
   }
 }

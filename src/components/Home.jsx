@@ -111,7 +111,13 @@ const Home = () => {
       {/* Video Section */}
       <div className={styles.videos}>
         <div className={styles.videobox}>
-          <video src={video2} autoPlay loop muted playsInline></video>
+          <video
+            src={video2}
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
         </div>
       </div>
 
