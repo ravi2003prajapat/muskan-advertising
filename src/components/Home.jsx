@@ -7,6 +7,7 @@ import newspaper from "../assets/Newspaper.webp";
 import hoarding from "../assets/hoarding.webp";
 
 import servicesData from "../data/services.json";
+import { Helmet } from "react-helmet-async"; // ✅ FIX: Import Helmet
 
 // ✅ Reusable ServiceCard component
 const ServiceCard = ({ title, color }) => {
@@ -48,7 +49,7 @@ const Home = () => {
       // Years counter
       let yStart = 0;
       const yEnd = 26; // target years
-      const yDuration = 10000; // 2s
+      const yDuration = 2000; // 2s
       const yIncrement = Math.ceil(yEnd / (yDuration / 16));
 
       yearsTimer = setInterval(() => {
@@ -91,6 +92,19 @@ const Home = () => {
 
   return (
     <div>
+      {/* ✅ Unique SEO tags for Home */}
+      <Helmet>
+        <title>Muskan Advertising | Smart Marketing, Real Results</title>
+        <meta
+          name="description"
+          content="Muskan Advertising - delivering impactful advertising, printing, and billboard campaigns in Rajasthan since 1998. Trusted by 1000+ clients."
+        />
+        <meta
+          name="keywords"
+          content="Muskan Advertising, Rajasthan advertising agency, billboard ads, printing services, newspaper ads"
+        />
+      </Helmet>
+
       {/* Hero Section */}
       <div className={styles.homemain}>
         <div className={styles.left}>
@@ -117,8 +131,8 @@ const Home = () => {
             loop
             preload="none"
             playsInline
-            poster={HomeMain} // optional: add poster image
-            className={styles.video} // for responsive styling
+            poster={HomeMain}
+            className={styles.video}
           >
             <source src={video2} type="video/webm" />
           </video>
@@ -138,7 +152,7 @@ const Home = () => {
               />
             ))}
 
-            {/* Optional: Duplicate cards */}
+            {/* Optional: Duplicate cards for smooth scrolling effect */}
             {servicesData.map((service, index) => (
               <ServiceCard
                 key={`dup-${index}`}
@@ -162,7 +176,7 @@ const Home = () => {
             <button>View More</button>
           </div>
           <div className={styles.image}>
-            <img loading="lazy" src={newspaper} alt="Muskan Advertising" />
+            <img loading="lazy" src={newspaper} alt="Newspaper Advertising" />
           </div>
         </div>
 
@@ -170,7 +184,7 @@ const Home = () => {
 
         <div className={styles.section1}>
           <div className={styles.image}>
-            <img loading="lazy" src={machine} alt="Muskan Advertising" />
+            <img loading="lazy" src={machine} alt="High Quality Printing" />
           </div>
           <div className={styles.content}>
             <h1>HIGH QUALITY PRINTING</h1>
@@ -196,7 +210,7 @@ const Home = () => {
             <button>View More</button>
           </div>
           <div className={styles.image}>
-            <img loading="lazy" src={hoarding} alt="Muskan Advertising" />
+            <img loading="lazy" src={hoarding} alt="Billboard Advertising" />
           </div>
         </div>
       </div>

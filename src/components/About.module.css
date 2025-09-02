@@ -1,3 +1,119 @@
-.about .header{
-    height: 400px;
+/* ✅ Header Image Section */
+.headerimage {
+  display: flex;
+  justify-content: center;
+  padding: 55px 50px;
+  background-color: #89b0de;
+  width: 100%;
+}
+
+.headerimage img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ✅ Divider Line */
+.line {
+  height: 25px;
+  background-color: #76a4d9;
+  width: 100%;
+}
+
+/* ✅ Header Section */
+.aboutmuskanadvertising .header {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: black;
+}
+
+.header p {
+  max-width: 750px;
+  font-size: 16px;
+  padding-bottom: 20px;
+  color: #333;
+}
+
+/* ✅ Mission & Why Choose Us Section */
+.muskanadvertisingmission {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.muskanadvertisingmission div {
+  flex: 1 1 200px;
+  max-width: 250px;
+  background-color: #5895db;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.muskanadvertisingmission div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Responsive Design (For screens up to 450px) */
+@media (max-width: 450px) {
+  .headerimage {
+    padding: 20px;
+  }
+
+  .headerimage img {
+    width: 100%;
+  }
+
+  .line {
+    height: 12px;
+  }
+
+  .aboutmuskanadvertising .header {
+    padding: 25px 50px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .header p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+.muskanadvertisingmission {
+    flex-direction: column;
+    align-items: center; /* ✅ optional: center cards */
+    gap: 15px;
+  }
+
+  .muskanadvertisingmission div {
+    flex: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 15px;
+    height: auto;  
+    display: block;
+    text-align: center;
+  }
 }
