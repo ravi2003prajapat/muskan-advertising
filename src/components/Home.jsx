@@ -112,12 +112,15 @@ const Home = () => {
       <div className={styles.videos}>
         <div className={styles.videobox}>
           <video
-            src={video2}
-            autoplay
+            autoPlay
             muted
             loop
-            playsinline
-          ></video>
+            playsInline
+            poster="" // optional: add poster image
+            className={styles.video} // for responsive styling
+          >
+            <source src={video2} type="video/webm" />
+          </video>
         </div>
       </div>
 
@@ -158,7 +161,7 @@ const Home = () => {
             <button>View More</button>
           </div>
           <div className={styles.image}>
-            <img src={newspaper} alt="" />
+            <img src={newspaper} alt="Muskan Advertising" />
           </div>
         </div>
 
@@ -166,7 +169,7 @@ const Home = () => {
 
         <div className={styles.section1}>
           <div className={styles.image}>
-            <img src={machine} alt="" />
+            <img src={machine} alt="Muskan Advertising" />
           </div>
           <div className={styles.content}>
             <h1>HIGH QUALITY PRINTING</h1>
@@ -192,7 +195,7 @@ const Home = () => {
             <button>View More</button>
           </div>
           <div className={styles.image}>
-            <img src={hoarding} alt="" />
+            <img src={hoarding} alt="Muskan Advertising" />
           </div>
         </div>
       </div>
