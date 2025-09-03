@@ -232,6 +232,12 @@
     width: 90%;
     padding: 0 15px;
   }
+  .line{
+    height: 12px;
+  }
+  .cardline{
+    width: 100%;
+  }
 
   .heading h1 {
     font-size: 22px;
