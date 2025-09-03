@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
+import { HashLink } from "react-router-hash-link";
+
 import HomeMain from "../assets/HomeMain.webp";
 import video2 from "../assets/video2.webm";
 import machine from "../assets/Machine.webp";
@@ -173,7 +175,9 @@ const Home = () => {
               to full pages, ensuring wide reach, strong visibility, and
               customer engagement.
             </p>
-            <button>View More</button>
+            <HashLink smooth to="/services#newspaper">
+              <button>View More</button>
+            </HashLink>
           </div>
           <div className={styles.image}>
             <img loading="lazy" src={newspaper} alt="Newspaper Advertising" />
@@ -193,7 +197,9 @@ const Home = () => {
               superior quality, weather-resistant, and designed to make your
               brand stand out.
             </p>
-            <button>View More</button>
+            <HashLink smooth to="/services#printing">
+              <button>View More</button>
+            </HashLink>
           </div>
         </div>
 

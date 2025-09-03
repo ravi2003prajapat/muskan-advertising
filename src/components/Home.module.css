@@ -30,6 +30,15 @@
 .line1 {
   height: 25px;
   background-color: #b52d78;
+  animation: slideIn 2s ease forwards;
+}
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .videos {
@@ -148,7 +157,7 @@
 .section1 .content h1 {
   font-size: 45px;
   font-weight: 900;
-  color: #9112bc;
+  color: #353535;
 }
 .section1 .content p {
   width: 100%;

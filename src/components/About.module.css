@@ -19,7 +19,17 @@
   height: 25px;
   background-color: #76a4d9;
   width: 100%;
+  animation: slideIn 2s ease forwards;
 }
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 
 /* ✅ Header Section */
 .aboutmuskanadvertising .header {

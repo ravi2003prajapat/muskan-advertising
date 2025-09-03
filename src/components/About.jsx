@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import { Helmet } from "react-helmet-async";
-import muskanadvertisingimage from "../assets/muskanadvertisingabout.svg"
+import muskanadvertisingimage from "../assets/muskanadvertisingabout.webp"
 
 const About = () => {
   return (

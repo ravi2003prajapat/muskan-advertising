@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <img src={logo} alt="Logo" />
+        <Link to="/"><img src={logo} alt="Muskan Advertising Logo" /></Link>
       </div>
 
       <div
